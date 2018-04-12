@@ -1,0 +1,76 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+
+.header-wrapper {
+  position: relative;
+  max-width: @parent-max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  text-align: center;
+  align-items: flex-start;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+
+    .screen-xs ({
+      padding-top: 2rem;
+    });
+
+    .screen-sm({
+      padding-top: 2rem;
+    });
+
+
+    &__text {
+      font-family: "League Gothic", sans-serif;
+      font-size: 2rem;
+      color: @title-color;
+      line-height: 1.7rem;
+
+      &_accent {
+        color: @title-accent-color;
+      }
+    }
+  }
+
+  &__social {
+    position: absolute;
+    right: 2%;
+
+    .screen-xs ({
+      right: 0;
+    });
+
+    .screen-sm({
+      right: 0;
+    });
+
+    .screen-md({
+      right: 5%;
+    });
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+
+      &-item {
+        padding: 0 0.5rem;
+
+        &__link {
+          text-decoration: none;
+          outline: none;
+        }
+      }
+
+    }
+  }
+}
+

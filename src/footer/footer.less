@@ -1,0 +1,82 @@
+@import "../variables/variables.less";
+@import "../mixin/media_query_mixins.less";
+
+.footer-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 1rem 0;
+  border-bottom: 1px dotted @content-border-color;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-family: "League Gothic", sans-serif;
+    font-size: 1rem;
+    color: @title-color;
+    text-transform: uppercase;
+
+    .screen-xs({
+      text-align: center;
+      font-size: 8vw;
+    });
+
+
+    &__text {
+      padding-left: 0.5rem;
+
+      &_accent {
+        color: @title-accent-color;
+      }
+    }
+  }
+
+  &__nav-bar {
+
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0.5rem;
+
+      .screen-xs({
+        justify-content: center;
+        padding-top: 0.5rem;
+      });
+
+      &-item {
+        padding-left: 1.5rem;
+
+        &__link {
+          font-family: "Arial", sans-serif;
+          font-size: 0.625rem;
+          color: @nav-bar-text-color;
+
+          &:hover {
+            text-decoration: none;
+            color: @nav-bar-text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  max-width: @parent-max-width;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+
+
+  &__text {
+    display: inline-block;
+    padding: 1rem 0;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    color: @nav-bar-text-color;
+  }
+}
